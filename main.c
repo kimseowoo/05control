@@ -5,25 +5,34 @@
 
 int main(int argc, char *argv[]) {
 
+
+	int answer=50;
+	int i;
 	int num=0;
-	char c;
-	char str[100];
-	
-	//string
-	printf("string : ");
-	//scanf("%s")
 	
 	
-	while ((c=getchar()) !='\n')
-	{
-		if ('0'<=c && '9'>=c)
+	do{
+		printf("Input a number : ");
+		scanf("%d" , &i);
+		num++;
+		
+		if(i<answer)
 		{
+			printf("low!\n");
 			num++;
 		}
-	}
+		else if (i>answer)
+		{
+			printf("high!\n");
+			num++;
+		}
+		else
+		{
+			printf("Á¤´ä!\n");
+		}
+		
+	}while (i !=answer);
 	
-	printf("The number of digits are %d", num);
-	
-
+	printf("trial : %i\n", num);
 	return 0;
 }

@@ -5,27 +5,24 @@
 
 int main(int argc, char *argv[]) {
 
-	int c;
+	int num=0;
+	char c;
+	char str[100];
 	
-	printf("Input a char : ");
-	scanf("%c", &c);
+	//string
+	printf("string : ");
+	//scanf("%s")
 	
-	if('A' <= c && c <='Z')
+	
+	while ((c=getchar()) !='\n')
 	{
-		printf("대문자입니다.");	
+		if ('0'<=c && '9'>=c)
+		{
+			num++;
+		}
 	}
-	else if('a' <= c && c <='z')
-	{
-		printf("소문자입니다.");
-	}
-	else if('0' <= c&& c<='9')
-	{
-		printf("숫자입니다."); 
-	}
-	else
-	{
-		printf("기타글자입니다.");
-	}
+	
+	printf("The number of digits are %d", num);
 	
 
 	return 0;
